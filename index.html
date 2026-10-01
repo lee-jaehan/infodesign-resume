@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="이재한의 디자인과 개발 경험, 뭐지 뉴스레터 협업과 HCI에 대한 관심을 소개합니다." />
+    <meta name="theme-color" content="#ffffff" />
+    <title>LEE JAEHAN — MAIN</title>
+    <link rel="preload" href="./fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./graph.css" />
+    <script src="./graph.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#page-main">본문으로 이동</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#main" aria-label="LEE JAEHAN, 메인으로">LEE<br />JAEHAN</a>
+      </header>
+
+      <nav class="site-nav" aria-label="페이지 이동">
+        <a class="nav-link" href="#main" data-page-link="main" aria-current="page"><span>MAIN</span></a>
+        <a class="nav-link" href="#works" data-page-link="works"><span>WORKS</span></a>
+        <a class="nav-link" href="#about" data-page-link="about"><span>ABOUT</span></a>
+      </nav>
+
+      <main id="app">
+        <section class="page page-main" id="page-main" data-page="main" aria-label="메인" tabindex="-1">
+          <div class="intro main-intro">
+            <p>KDMHS 20TH<br />DEPT. OF WEB PROGRAMMING</p>
+            <p>AJOU UNIV. ’24<br />DEPT. OF DIGITAL MEDIA</p>
+          </div>
+
+          <div class="graph-block">
+            <div id="activity-graph" class="activity-graph" aria-label="2016년부터 2026년까지의 활동 기록"></div>
+            <div class="graph-controls">
+              <button class="graph-next" type="button" data-graph-next aria-label="다음 활동 보기">
+                <img src="./img/figma/scroll-arrow.svg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <section class="quick-look" aria-labelledby="quick-look-heading">
+            <div class="section-rule">
+              <h1 id="quick-look-heading">QUICK LOOK</h1>
+              <span class="rule-image"><img src="./img/figma/quick-look-line.svg" alt="" /></span>
+            </div>
+            <ol class="timeline">
+              <li class="timeline-entry">
+                <span class="timeline-year">NOW</span><span></span>
+                <p>디지털미디어학과 3학년 2학기 재학</p>
+                <img class="timeline-stem" src="./img/figma/timeline-30.svg" alt="" />
+              </li>
+              <li class="timeline-entry">
+                <span class="timeline-year">2026.</span><span>AUG.</span><p>뭐지 뉴스레터 워크샵</p>
+                <img class="timeline-stem" src="./img/figma/timeline-26.svg" alt="" />
+              </li>
+              <li class="timeline-entry">
+                <span class="timeline-year">2025.</span><span>JAN.</span><p>중앙사진동아리 A.SA.<br />제작부장 활동 (~26. 6.)</p>
+                <img class="timeline-stem" src="./img/figma/timeline-54.svg" alt="" />
+              </li>
+              <li class="timeline-entry">
+                <span class="timeline-year">2024.</span><span>MAR.</span>
+                <div class="timeline-events"><p>중앙사진동아리 A.SA. 입부</p><p>아주대학교 24학번<br />디지털미디어학과 입학</p></div>
+                <img class="timeline-stem" src="./img/figma/timeline-96.svg" alt="" />
+              </li>
+              <li class="timeline-entry">
+                <span class="timeline-year">2023.</span><span>NOV.</span><p>뭐지 뉴스레터 리디자인 (~12월)</p>
+                <img class="timeline-stem" src="./img/figma/timeline-30.svg" alt="" />
+              </li>
+              <li class="timeline-entry">
+                <span class="timeline-year">2022.</span><span>JUN.</span><p>뭐지 뉴스레터 활동 시작</p>
+                <img class="timeline-stem" src="./img/figma/timeline-30.svg" alt="" />
+              </li>
+              <li class="timeline-entry">
+                <span class="timeline-year">2021.</span><span>MAR.</span><p>한국디지털미디어고등학교 20기<br />웹프로그래밍과 입학</p>
+                <img class="timeline-stem" src="./img/figma/timeline-30.svg" alt="" />
+              </li>
+            </ol>
+          </section>
+
+          <section class="story-section story-development" aria-labelledby="development-heading">
+            <h2 id="development-heading">개발자의 꿈</h2>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>초등학생 때 “엔트리” 블럭코딩으로<br class="wide-break" /> 처음 소프트웨어라는 것을 알게된 이후,<br class="wide-break" /> 저는 초중등 모두 개발자라는 꿈을 가졌습니다.</p>
+                <p>생활기록부의 장래희망 란에는,</p>
+                <ul class="dream-labels" aria-label="당시의 장래희망"><li>프로그래머</li><li>앱개발자</li><li>시스템프로그래머</li><li class="dream-ellipsis" aria-hidden="true">…</li></ul>
+                <p class="dream-after">말은 모두 다르지만 소프트웨어 엔지니어라는 꿈은<br class="wide-break" /> 항상 같았습니다.</p>
+                <p class="dream-after">이후 꿈을 이어가고자 IT특성화로 유명한<br class="wide-break" /> 한국디지털미디어고등학교에 진학했습니다.</p>
+              </div>
+              <figure class="dream-image"><img src="./img/Frame%204.png" width="884" height="482" alt="생활기록부에 적었던 프로그래머, 앱개발자, 시스템프로그래머라는 장래희망" loading="lazy" /></figure>
+            </div>
+          </section>
+
+          <section class="story-section story-design" aria-labelledby="design-heading">
+            <h2 id="design-heading">디자인에 입문</h2>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>진학한 고등학교에서 앱/웹개발 동아리에 들어가<br class="wide-break" /> Adobe Xd로 처음 디자인을 접했습니다.</p>
+                <p>원하는 UI를 직접 디자인하는 것에 흥미를 느끼고<br class="wide-break" /> 이를 계기로 Figma, Adobe Illustrator를<br class="wide-break" /> 독학하였습니다.</p>
+              </div>
+              <figure><img src="./img/modoolist-design.png" width="3912" height="2200" alt="교내 동아리에서 디자인한 목표 관리 앱 modoolist의 모바일 화면" loading="lazy" /><figcaption>교내 동아리에서 디자인한 작업물</figcaption></figure>
+            </div>
+            <div class="story-grid design-second-row">
+              <div class="story-copy"><p>혼자 배운 디자인툴을 사용해<br class="wide-break" /> 학교에서 학습하는 웹개발 과제를<br class="wide-break" /> 효율적으로 마무리한 경험이 있습니다.</p></div>
+              <figure><img src="./img/스크린샷%202026-10-01%20오후%201.16.11.png" width="2296" height="1394" alt="학교 웹개발 과제를 위해 Figma에서 디자인한 웹페이지 화면들" loading="lazy" /><figcaption>학교 과제의 웹페이지를 Figma로 디자인한 작업물</figcaption></figure>
+            </div>
+          </section>
+
+          <section class="story-section story-newsletter" aria-labelledby="newsletter-heading">
+            <h2 id="newsletter-heading">뭐지 뉴스레터</h2>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>뭐지 뉴스레터는 2022년 시작한 이후<br class="wide-break" /> 지금까지 디자인에 계속 참여하고 있는<br class="wide-break" /> 뉴스레터 서비스입니다.</p>
+                <p>같은 고등학교 친구와 시작하였고<br class="wide-break" /> 2023년 말 로고, 이메일 레이아웃 등<br class="wide-break" /> 서비스 전반적인 리디자인을 했습니다.</p>
+                <p>디자인 뿐만 아니라 일부 페이지는<br class="wide-break" /> 직접 제작하였고, 개발 과정을 옆에서<br class="wide-break" /> 같이 보면서 배운 점도 많았습니다.</p>
+                <p>지금도 계속해서 정기적으로 만나<br class="wide-break" /> 발전시키고 있습니다.</p>
+              </div>
+              <figure class="moji-card" aria-label="뭐지 뉴스레터 로고">
+                <img src="./img/figma/moji-symbol.svg" alt="" />
+                <img src="./img/figma/moji-wordmark.svg" alt="뭐지 뉴스레터" />
+              </figure>
+            </div>
+            <div class="story-copy newsletter-followup"><p>학교 수업, 개발자 친구를 옆에 두면서<br class="wide-break" /> 실현 가능한 디자인에 대한 감을 얻었고,<br class="wide-break" /> 개발자 친구와 서로 직접 피드백을 주고 받으면서<br class="wide-break" /> 디자이너로서 개발자와의 소통 방법을 알게 되었습니다.</p></div>
+          </section>
+
+          <section class="story-section story-current" aria-labelledby="current-heading">
+            <h2 id="current-heading">현재</h2>
+            <div class="story-copy current-copy">
+              <p>개발자와 디자이너 사이를 고민하는 시기를 거쳐,<br class="wide-break" /> 지금은 HCI 연구에 관심을 가지게 되어<br class="wide-break" /> 해당 분야로 나아가려고 노력하고 있습니다.</p>
+              <p>모빌리티, 안경 등 새로운 방식의 컴퓨터와<br class="wide-break" /> 사람이 원활하게 상호작용할 수 있도록<br class="wide-break" /> 더 많이 공부하고 연구할 계획입니다.</p>
+            </div>
+          </section>
+
+          <footer class="site-footer">
+            <p>LEE<br />JAEHAN</p>
+            <p>AJOU UNIV. ’24<br />DEPT. OF DIGITAL MEDIA</p>
+            <p><a href="mailto:contact@leejaehan.com">contact@leejaehan.com</a></p>
+          </footer>
+        </section>
+
+        <section class="page page-works" id="page-works" data-page="works" aria-label="작업물" tabindex="-1" hidden>
+          <div class="intro works-intro">
+            <!-- 실제 Notion 주소가 준비되면 아래 href를 교체합니다. -->
+            <a class="works-link" href="https://google.com" target="_blank" rel="noopener noreferrer">ALL WORKS IN HERE →</a>
+            <p>OPENS AN EXTERNAL NOTION PAGE</p>
+          </div>
+        </section>
+
+        <section class="page page-about" id="page-about" data-page="about" aria-label="소개와 연락처" tabindex="-1" hidden>
+          <div class="intro about-intro"><p>AJOU UNIV. ’24<br />DEPT. OF DIGITAL MEDIA</p></div>
+          <div class="contact-groups">
+            <section class="contact-group" aria-labelledby="email-heading">
+              <h1 id="email-heading">EMAIL</h1>
+              <div class="contact-items">
+                <p>SCHOOL<br /><a href="mailto:leejh17025@ajou.ac.kr">leejh17025@ajou.ac.kr</a></p>
+                <p>PERSONAL<br /><a href="mailto:contact@leejaehan.com">contact@leejaehan.com</a></p>
+              </div>
+            </section>
+            <section class="contact-group" aria-labelledby="social-heading">
+              <h2 id="social-heading">ETC.</h2>
+              <div class="contact-items">
+                <p>GITHUB<br /><a class="social-link" href="https://github.com/lee-jaehan" target="_blank" rel="noopener noreferrer">@lee-jaehan</a></p>
+                <p>INSTAGRAM<br /><a class="social-link" href="https://www.instagram.com/woone_two/" target="_blank" rel="noopener noreferrer">@woone_two</a></p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

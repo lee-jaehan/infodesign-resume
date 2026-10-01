@@ -1,0 +1,87 @@
+.activity-graph {
+  --graph-cell: 10px;
+  --graph-gap: 3px;
+  --graph-step: calc(var(--graph-cell) + var(--graph-gap));
+  --graph-empty: #ebedf0;
+  --graph-middle: #9be9a8;
+  --graph-endpoint: #216e39;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 172px;
+  padding: 10px 12px;
+  border: 1px solid #d8dee4;
+  border-radius: 6px;
+  background: #fff;
+  color: #091020;
+  font-family: inherit;
+}
+
+.activity-graph *,
+.graph-tooltip * { box-sizing: border-box; }
+
+.graph-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #bdc5cb transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.graph-scroll::-webkit-scrollbar { height: 10px; }
+.graph-scroll::-webkit-scrollbar-thumb { border: 3px solid #fff; border-radius: 10px; background: #bdc5cb; }
+.graph-scroll::-webkit-scrollbar-track { background: transparent; }
+.graph-sheet { width: calc(var(--graph-columns) * var(--graph-step) - var(--graph-gap)); padding-bottom: 6px; }
+.graph-surface { display: flex; align-items: flex-start; }
+.graph-prefix { display: flex; align-items: center; flex: 0 0 calc(var(--graph-summary-columns) * var(--graph-step)); height: calc(7 * var(--graph-step) - var(--graph-gap)); }
+.graph-summary { display: grid; flex: none; grid-template-columns: repeat(6, var(--graph-cell)); grid-template-rows: repeat(7, var(--graph-cell)); gap: var(--graph-gap); padding: 0; border: 0; border-radius: 2px; background: transparent; cursor: pointer; }
+.graph-summary .graph-cell { cursor: inherit; }
+.graph-summary:hover, .graph-summary:focus-visible { outline: 2px solid #091020; outline-offset: 3px; }
+.graph-compression-mark { flex: 1; color: #929aa2; text-align: center; font-size: 18px; letter-spacing: 3px; }
+.graph-phase-axis, .graph-year-axis { position: relative; height: 22px; }
+.graph-phase-label, .graph-year-label { position: absolute; left: calc(var(--graph-column) * var(--graph-step)); font-size: 11px; line-height: 16px; white-space: nowrap; }
+.graph-phase-label { width: calc(var(--graph-span) * var(--graph-step)); padding-left: 1px; font-weight: 600; color: #091020; }
+.graph-year-label { color: #606875; font-variant-numeric: tabular-nums; }
+.graph-grid { display: grid; grid-template-columns: repeat(var(--graph-weeks), var(--graph-cell)); grid-template-rows: repeat(7, var(--graph-cell)); gap: var(--graph-gap); }
+.graph-weekday-row { display: contents; }
+.graph-cell { position: relative; width: var(--graph-cell); height: var(--graph-cell); border-radius: 2px; background: var(--graph-empty); outline: 0; cursor: default; }
+.graph-cell.is-middle { background: var(--graph-middle); }
+.graph-cell.is-endpoint { background: var(--graph-endpoint); }
+.graph-cell.is-padding { visibility: hidden; }
+.graph-cell.is-important::after { content: ""; position: absolute; width: 4px; height: 4px; inset: 3px; border-radius: 50%; background: #fff; }
+.graph-cell[data-date]:hover, .graph-cell[data-date]:focus-visible { z-index: 1; box-shadow: 0 0 0 2px #091020; }
+.graph-cell[data-activities]:not([data-activities=""]) { cursor: pointer; }
+
+.graph-tooltip {
+  position: fixed;
+  z-index: 100;
+  width: max-content;
+  max-width: min(340px, calc(100vw - 24px));
+  padding: 14px 16px;
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+  background: #fff;
+  color: #091020;
+  box-shadow: 0 5px 24px rgb(9 16 32 / 12%);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.55;
+  overflow: auto;
+  overflow-wrap: anywhere;
+  overscroll-behavior: contain;
+}
+
+.graph-tooltip[hidden] { display: none; }
+.graph-tooltip p { margin: 0; }
+.graph-tooltip-item + .graph-tooltip-item { margin-top: 12px; padding-top: 12px; border-top: 1px solid #ebedf0; }
+.graph-tooltip .graph-tooltip-date { margin-bottom: 3px; color: #606875; font-size: 11px; }
+.graph-tooltip .graph-tooltip-title { margin-bottom: 4px; font-size: 13px; font-weight: 700; }
+.graph-tooltip .graph-tooltip-description { color: #46505e; }
+.graph-tooltip .graph-tooltip-highlight { margin-top: 6px; color: #216e39; font-weight: 600; }
+.graph-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+@media (max-width: 600px) {
+  .activity-graph { padding-inline: 10px; }
+}
